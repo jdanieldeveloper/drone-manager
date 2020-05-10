@@ -1,0 +1,93 @@
+<div class="row">
+  <div class="col">
+    <div class="d-flex flex-column">
+      <div class="p-2">
+        <div class="dropdown">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>All Drones</b>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div *ngFor="let drone of drones">
+              <a class="dropdown-item" href="#">{{drone.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="d-flex flex-column">
+      <div class="p-2">
+        <div class="dropdown">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton2"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>All Projects</b>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <div *ngFor="let project of projects">
+              <a class="dropdown-item" href="#">{{project.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="dropdown">
+      <div class="d-flex flex-column">
+        <div class="p-2">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton3"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>All Pilots</b>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Pilot 1</a>
+            <a class="dropdown-item" href="#">Pilot 2</a>
+            <a class="dropdown-item" href="#">Pilot 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="dropdown">
+      <div class="d-flex flex-column">
+        <div class="p-2">
+          <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenuButton4"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>Others</b>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Other 1</a>
+            <a class="dropdown-item" href="#">Other 2</a>
+            <a class="dropdown-item" href="#">Other 3</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="d-flex flex-column">
+      <div class="p-2">
+        <button type="button" class="btn btn-outline-dark btn-sm">
+          Download &nbsp;
+          <svg class="bi bi-download" width="1.1em" height="1.1em" viewBox="0 0 16 16" fill="currentColor"
+               xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                  d="M.5 8a.5.5 0 01.5.5V12a1 1 0 001 1h12a1 1 0 001-1V8.5a.5.5 0 011 0V12a2 2 0 01-2 2H2a2 2 0 01-2-2V8.5A.5.5 0 01.5 8z"
+                  clip-rule="evenodd"/>
+            <path fill-rule="evenodd"
+                  d="M5 7.5a.5.5 0 01.707 0L8 9.793 10.293 7.5a.5.5 0 11.707.707l-2.646 2.647a.5.5 0 01-.708 0L5 8.207A.5.5 0 015 7.5z"
+                  clip-rule="evenodd"/>
+            <path fill-rule="evenodd" d="M8 1a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 018 1z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

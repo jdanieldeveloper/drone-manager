@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col">
+    <div class="d-flex flex-column">
+      <div class="p-2">
+        <table class="table">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">{{dronesHeader.id | uppercase}}</th>
+            <th scope="col">{{dronesHeader.name | uppercase}}</th>
+            <th scope="col">{{dronesHeader.latitude | uppercase}}</th>
+            <th scope="col">{{dronesHeader.logitude | uppercase}}</th>
+            <th scope="col">{{dronesHeader.flights | uppercase}}</th>
+            <th scope="col">{{dronesHeader.projects | uppercase}}</th>
+          </tr>
+          </thead>
+          <tbody *ngFor="let drone of drones">
+          <tr>
+            <th scope="row">{{drone.droneId}}</th>
+            <td>{{drone.name}}</td>
+            <td>{{drone.latitude}}</td>
+            <td>{{drone.longitude}}</td>
+            <td>{{drone.fights}}</td>
+            <td>{{drone.projects.length}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
