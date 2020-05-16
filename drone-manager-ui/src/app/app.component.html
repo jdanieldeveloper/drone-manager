@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col px-sm-0 bg-default">
-      <app-header></app-header>
+      <app-header-sidebar></app-header-sidebar>
     </div>
   </div>
   <div class="row">
@@ -9,10 +9,7 @@
        <app-body-sidebar></app-body-sidebar>
     </div>
     <div class="col">
-      <app-body-filter (selectDroneFilterEvent)="whenDroneIsSelected($event)"></app-body-filter>
-      <app-body-map [droneId]="droneIdFiltered"></app-body-map>
-      <app-body-statistics [droneId]="droneIdFiltered"></app-body-statistics>
-      <app-body-table [droneId]="droneIdFiltered"></app-body-table>
+      <router-outlet></router-outlet>
     </div>
   </div>
   <!--

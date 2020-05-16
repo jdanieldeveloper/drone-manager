@@ -9,7 +9,7 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <div *ngFor="let drone of drones">
-              <a class="dropdown-item" href="#" (click)="onSelectDroneFilter(drone.droneId)" >{{drone.name}}</a>
+              <a class="dropdown-item" (click)="onSelectDroneFilter(drone.droneId)" >{{drone.name}}</a>
             </div>
           </div>
         </div>
@@ -26,7 +26,7 @@
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <div *ngFor="let project of projects">
-              <a class="dropdown-item" href="#">{{project.name}}</a>
+              <a class="dropdown-item">{{project.name}}</a>
             </div>
           </div>
         </div>

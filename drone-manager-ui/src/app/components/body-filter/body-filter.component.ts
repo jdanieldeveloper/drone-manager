@@ -8,11 +8,11 @@ import {Drone, DroneService, Project} from '../../services/drone.service';
 })
 export class BodyFilterComponent implements OnInit {
 
-  private drones: Drone[] = [];
-  private projects: Project[] = [];
+  drones: Drone[] = [];
+  projects: Project[] = [];
 
   @Output()
-  public selectDroneFilterEvent = new EventEmitter();
+  selectDroneFilterEvent = new EventEmitter();
 
   constructor(private droneService: DroneService) {}
 
@@ -21,7 +21,7 @@ export class BodyFilterComponent implements OnInit {
     this.projects = this.droneService.getAllProjets();
   }
 
-  public onSelectDroneFilter(droneId: number) {
+  onSelectDroneFilter(droneId: number) {
     this.selectDroneFilterEvent.emit(droneId);
   }
 }

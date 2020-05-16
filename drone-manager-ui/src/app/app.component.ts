@@ -7,11 +7,4 @@ import {Component, EventEmitter, Output} from '@angular/core';
 })
 export class AppComponent {
   title = 'drone-manager-ui';
-
-  public droneIdFiltered: number;
-
-  public whenDroneIsSelected(e: any) {
-    this.droneIdFiltered = e;
-  }
-
 }
