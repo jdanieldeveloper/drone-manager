@@ -9,10 +9,10 @@
        <app-body-sidebar></app-body-sidebar>
     </div>
     <div class="col">
-      <app-header-filter></app-header-filter>
-      <app-body-map></app-body-map>
-      <app-body-statistics></app-body-statistics>
-      <app-body-table></app-body-table>
+      <app-body-filter (selectDroneFilterEvent)="whenDroneIsSelected($event)"></app-body-filter>
+      <app-body-map [droneId]="droneIdFiltered"></app-body-map>
+      <app-body-statistics [droneId]="droneIdFiltered"></app-body-statistics>
+      <app-body-table [droneId]="droneIdFiltered"></app-body-table>
     </div>
   </div>
   <!--

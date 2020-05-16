@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DroneService, Statistics} from '../../services/drone.service';
 
 @Component({
@@ -8,12 +8,29 @@ import {DroneService, Statistics} from '../../services/drone.service';
 })
 export class BodyStatisticsComponent implements OnInit {
 
-  private stadistics: Statistics;
+  statistics: Statistics;
+  droneFilteredId: number;
 
   constructor(private droneService: DroneService) { }
 
   ngOnInit() {
-    this.stadistics = this.droneService.getStadistics();
+    this.statistics = this.droneService.getStatistics();
+  }
+
+  getStatisticsByDroneId(droneId: number) {
+    return this.droneService.getStatisticsByDroneId(droneId);
+  }
+
+  @Input()
+  set droneId(droneId: number) {
+    this.droneFilteredId = droneId;
+
+    // change state of statistics
+    this.statistics = this.getStatisticsByDroneId(this.droneFilteredId);
+  }
+
+  get droneId(): number {
+    return this.droneFilteredId;
   }
 
 }

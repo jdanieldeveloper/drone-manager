@@ -122,7 +122,7 @@ export class DroneService {
     console.log('Init DroneService...');
   }
 
-  public getAllDrones() {
+  getAllDrones() {
     return this.drones;
   }
 
@@ -130,7 +130,7 @@ export class DroneService {
     return this.drones.filter(f => f.droneId === id);
   }
 
-  public getAllProjets() {
+  getAllProjets() {
     const projects: Project[] = [];
     // fill
     for (const drone of this.drones) {
@@ -142,10 +142,10 @@ export class DroneService {
     return projects;
   }
 
-  getStadistics() {
+  getStatistics() {
     let fights = 0;
     let projects = 0;
-    const pilot = 10; // TODO add pilots
+    const pilot = 10; // TODO add pilots statistics
 
     // count projects and flights
     for (const drone of this.drones) {
@@ -161,6 +161,28 @@ export class DroneService {
     stadistics.pilots = pilot;
 
     return stadistics;
+  }
+
+
+  getStatisticsByDroneId(droneId: number) {
+    let fights = 0;
+    let projects = 0;
+    const pilot = 10; // TODO add pilots statistics
+
+    // count projects and flights
+    for (const drone of this.getDroneById(droneId)) {
+      fights += drone.fights;
+      for (const project of drone.projects) {
+        projects++;
+      }
+    }
+
+    const statistics = new Statistics();
+    statistics.flights = fights;
+    statistics.projects = projects;
+    statistics.pilots = pilot;
+
+    return statistics;
   }
 }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-body-map',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BodyMapComponent implements OnInit {
 
-  constructor() { }
+  droneFilteredId: number;
 
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit() {
+    this.droneFilteredId = 0; // the first picture
+  }
+
+  @Input()
+  set droneId(droneId: number) {
+    this.droneFilteredId = droneId;
+  }
+
+  get droneId(): number {
+    return this.droneFilteredId;
+  }
 }

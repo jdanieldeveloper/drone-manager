@@ -12,6 +12,7 @@ import { BodySidebarComponent } from './components/body-sidebar/body-sidebar.com
 import { FooterComponent } from './components/footer/footer.component';
 import {DroneService} from './services/drone.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import {DroneService} from './services/drone.service';
     BodyStatisticsComponent,
     BodyTableComponent,
     BodySidebarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
